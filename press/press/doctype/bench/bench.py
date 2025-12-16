@@ -284,7 +284,7 @@ class Bench(Document):
 			"redis_queue": self.build_redis_uri(11001),
 			"redis_socketio": self.build_redis_uri(13001),
 			"socketio_port": 9000,
-			"webserver_port": 8000,
+			"webserver_port": 8011,
 			"restart_supervisor_on_update": True,
 		}
 

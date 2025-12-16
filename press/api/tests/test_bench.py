@@ -214,7 +214,7 @@ class TestAPIBench(FrappeTestCase):
 		self.assertIn(image_name, [tag for tag in image.tags])
 
 		test_port = 10501
-		client.containers.run(image=image_name, remove=True, detach=True, ports={"8000/tcp": test_port})
+		client.containers.run(image=image_name, remove=True, detach=True, ports={"8011/tcp": test_port})
 		while True:
 			# Ensure that gunicorn at least responds. Usually we'll get 404 as there's no site installed *yet*
 			try:

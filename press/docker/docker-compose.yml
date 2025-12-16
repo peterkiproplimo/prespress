@@ -18,7 +18,7 @@ services:
       [
         "/home/frappe/frappe-bench/env/bin/gunicorn",
         "--bind",
-        "0.0.0.0:8000",
+        "0.0.0.0:8011",
         "--timeout",
         "120",
         "--workers",
@@ -32,7 +32,7 @@ services:
       ]
     working_dir: /home/frappe/frappe-bench/sites
     # ports:
-    #   - "18000:8000"
+    #   - "18000:8011"
     volumes:
       # - nginx:/home/frappe/frappe-bench/nginx:rw
       - logs:/home/frappe/frappe-bench/logs:rw

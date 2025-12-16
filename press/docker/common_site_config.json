@@ -5,5 +5,5 @@
     "redis_socketio": "redis://localhost:13001",
     "shallow_clone": true,
     "socketio_port": 9000,
-    "webserver_port": 8000
-}
+    "webserver_port": 8011
+} 

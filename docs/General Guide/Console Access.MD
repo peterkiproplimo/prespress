@@ -41,7 +41,7 @@ frappe@f1:~$ docker container ls | grep bench-0032-000631-f1
 This would show an output similar to
 
 ```sh
-ad8b1b6ac859 registry.frappe.cloud/production/frappe.cloud/bench-0032:deploy-0032-000631          "/home/frappe/frappe…" 12 days ago  Up 12 days  8000/tcp bench-0032-000631-f1_web.1.dwwpbeewfsxsakcsl3o3anyxp
+ad8b1b6ac859 registry.frappe.cloud/production/frappe.cloud/bench-0032:deploy-0032-000631          "/home/frappe/frappe…" 12 days ago  Up 12 days  8011/tcp bench-0032-000631-f1_web.1.dwwpbeewfsxsakcsl3o3anyxp
 ```
 
 The first string in the output is the container ID and you can use it with docker exec. e.g.

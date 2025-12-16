@@ -92,7 +92,7 @@ jobs:
     env:
       PRESS_ADMIN_USER_EMAIL: playwright@example.com
       PRESS_ADMIN_USER_PASSWORD: playwright
-      BASE_URL: http://test_site:8000
+      BASE_URL: http://test_site:8011
 
     services:
       mariadb:

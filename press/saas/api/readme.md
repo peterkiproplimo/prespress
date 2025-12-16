@@ -30,7 +30,7 @@ Sometimes, we may need to pass the secret token to frontend for some specific ta
 **Request**
 
 ```bash
-curl --location --request POST 'http://fc.local:8000/api/method/press.saas.api.auth.generate_access_token' \
+curl --location --request POST 'http://fc.local:8011/api/method/press.saas.api.auth.generate_access_token' \
 --header 'x-site: oka-hdz-qpj.tanmoy.fc.frappe.dev' \
 --header 'x-site-token: 004f85a3ae93927d2f0fcc668d11cb71'
 ```
