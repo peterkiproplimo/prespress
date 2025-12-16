@@ -2,7 +2,7 @@
 - name: Allow Docker Loopback Access for Redis
   command: >
     iptables -I DOCKER-USER 1 -i docker0 -o docker0 -p tcp
-    --dport 11000:20000 -j ACCEPT
+    --dport 11001:20000 -j ACCEPT
 
 - name: Ensure iptables-persistent installed
   apt:

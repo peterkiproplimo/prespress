@@ -147,7 +147,7 @@ In some cases, it may be so that multiple partners are working on features for a
 
 * SSH into the site server using User SSH Certificate.
 * Once you are in the site bench ie. after running `docker exec -it <bench-name> bash`
-* Start redis-cli by running `redis-cli -p 13000` command.
+* Start redis-cli by running `redis-cli -p 13001` command.
 * Usage limit can be reset by deleting the latest redis rate-limit-counter keys
 * To see the avalaible keys,
 

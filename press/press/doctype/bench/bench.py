@@ -280,9 +280,9 @@ class Bench(Document):
 
 		config = {
 			"monitor": True,
-			"redis_cache": self.build_redis_uri(13000),
-			"redis_queue": self.build_redis_uri(11000),
-			"redis_socketio": self.build_redis_uri(13000),
+			"redis_cache": self.build_redis_uri(13001),
+			"redis_queue": self.build_redis_uri(11001),
+			"redis_socketio": self.build_redis_uri(13001),
 			"socketio_port": 9000,
 			"webserver_port": 8000,
 			"restart_supervisor_on_update": True,
@@ -342,8 +342,8 @@ class Bench(Document):
 
 	def update_bench_config_with_rq_port(self, bench_config):
 		if self.is_new():
-			bench_config["rq_port"] = 11000 + self.port_offset
-			bench_config["rq_cache_port"] = 13000 + self.port_offset
+			bench_config["rq_port"] = 11001 + self.port_offset
+			bench_config["rq_cache_port"] = 13001 + self.port_offset
 		elif old := self.get_doc_before_save():
 			config = json.loads(old.bench_config)
 			if config.get("rq_port"):

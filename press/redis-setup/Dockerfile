@@ -39,7 +39,7 @@ COPY supervisord.conf /etc/supervisor/supervisord.conf
 
 # Expose ports
 # Redis cache and redis queue ports
-EXPOSE 11000 13000
+EXPOSE 11001 13001
 
 # Switch to frappe user for remaining setup
 USER frappe
