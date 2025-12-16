@@ -165,7 +165,15 @@ function getInitialData() {
 	if (import.meta.env.DEV) {
 		return frappeRequest({
 			url: '/api/method/press.www.dashboard.get_context_for_dev',
-		}).then((values) => Object.assign(window, values));
+		})
+			.then((values) => Object.assign(window, values))
+			.catch((err) => {
+				// If the dev-only endpoint is unreachable (404 or network error),
+				// don't let it prevent the app from booting. Log a helpful message
+				// and continue with an empty context.
+				console.warn('Unable to fetch dev dashboard context, continuing without it:', err);
+				return Promise.resolve();
+			});
 	} else {
 		return Promise.resolve();
 	}

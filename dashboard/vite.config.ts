@@ -35,7 +35,20 @@ export default defineConfig({
 		...(process.env.ENABLE_VUE_DEVTOOLS ? [vueDevTools()] : []),
 	],
 	server: {
-		allowedHosts: true
+		allowedHosts: true,
+		proxy: {
+			'/api': {
+				target: 'http://38.242.211.95:8011',
+				changeOrigin: true,
+				secure: false,
+			},
+			'/socket.io': {
+				target: 'http://38.242.211.95:8011',
+				ws: true,
+				changeOrigin: true,
+				secure: false,
+			},
+		},
 	},
 	resolve: {
 		alias: {
